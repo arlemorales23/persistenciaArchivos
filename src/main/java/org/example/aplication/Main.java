@@ -65,6 +65,9 @@ public class Main {
     }
 
     private static void crearProducto() {
+        System.out.print("Ingrese el còdigo del producto: ");
+        int cod  = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("Ingrese el nombre del producto: ");
         String nombre = scanner.nextLine();
         System.out.print("Ingrese el precio del producto: ");
@@ -72,6 +75,7 @@ public class Main {
         scanner.nextLine(); // Consumir el salto de línea
 
         Producto producto = new Producto();
+        producto.setId(cod);
         producto.setNombre(nombre);
         producto.setPrecio(precio);
 
